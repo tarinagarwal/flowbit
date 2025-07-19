@@ -44,11 +44,15 @@ NODE_ENV=development
 PORT=3001
 ```
 
-###### 1. Create `.env` file in the packages/api directory:
+###### 2. Create `.env` file in the packages/api directory:
 
 ```env
 MONGO_URI=your-mongodb-uri
 ```
+
+
+###### 3. Update the MONGO_URI and NGROK_AUTH_TOKEN in docker-compose.yml also
+
 
 ### 3. Start Services
 
