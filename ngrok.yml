@@ -1,0 +1,7 @@
+version: 2
+authtoken: 2zylfJOfTEEgG3ZlbvBmhlYMJ7I_4C9YvuFtApG5ZnxCvPekn
+tunnels:
+  api:
+    addr: host.docker.internal:3001
+    proto: http
+    schemes: [https]

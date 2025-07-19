@@ -1,0 +1,31 @@
+{
+  "name": "flowbit-multitenant-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:shell\" \"npm run dev:tickets\"",
+    "dev:api": "cd packages/api && npm run dev",
+    "dev:shell": "cd packages/shell && npm run dev",
+    "dev:tickets": "cd packages/support-tickets && npm run dev",
+    "build": "npm run build:shell && npm run build:tickets",
+    "build:shell": "cd packages/shell && npm run build",
+    "build:tickets": "cd packages/support-tickets && npm run build",
+    "test": "cd packages/api && npm test",
+    "lint": "eslint packages --ext .ts,.tsx,.js,.jsx",
+    "seed": "cd packages/api && npm run seed",
+    "users": "cd packages/api/ && npm run users",
+    "create-n8n-workflows": "cd packages/api && npm run create-n8n-workflows",
+    "test-tenant-status": "cd packages/api && npm run test-tenant-status",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  }
+}
