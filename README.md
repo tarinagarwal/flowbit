@@ -30,7 +30,7 @@ npm install
 
 ### 2. Environment Configuration
 
-Create `.env` file in the root directory:
+###### 1. Create `.env` file in the root directory:
 
 ```env
 MONGO_URI=your-mongodb-uri
@@ -42,6 +42,12 @@ NGROK_AUTH_TOKEN=your-ngrok-token
 
 NODE_ENV=development
 PORT=3001
+```
+
+###### 1. Create `.env` file in the packages/api directory:
+
+```env
+MONGO_URI=your-mongodb-uri
 ```
 
 ### 3. Start Services
